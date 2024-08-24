@@ -11,7 +11,7 @@ Este proyecto es un sistema de gestión de inventario diseñado para manejar pro
 ## Instalación
 1. Clonar el repositorio:
     ```bash
-    git clone <URL_DEL_REPOSITORIO>
+    git clone https://github.com/JuanCano420/PRUEBA2
     ```
 2. Crear y activar el entorno virtual:
     ```bash
