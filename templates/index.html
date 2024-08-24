@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Inventario</title>
+</head>
+<body>
+    <h1>Sistema de Gestión de Inventario</h1>
+    <h2>Productos</h2>
+    <ul>
+        {% for producto in productos %}
+            <li><a href="{{ url_for('producto', nombre=producto.nombre) }}">{{ producto.nombre }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <h2>Categorías</h2>
+    <ul>
+        {% for categoria in categorias %}
+            <li><a href="{{ url_for('categoria', nombre=categoria.nombre) }}">{{ categoria.nombre }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <h2>Proveedores</h2>
+    <ul>
+        {% for proveedor in proveedores %}
+            <li><a href="{{ url_for('proveedor', nombre=proveedor.nombre) }}">{{ proveedor.nombre }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <h2>Bodegas</h2>
+    <ul>
+        {% for bodega in bodegas %}
+            <li><a href="{{ url_for('bodega', nombre=bodega.nombre) }}">{{ bodega.nombre }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

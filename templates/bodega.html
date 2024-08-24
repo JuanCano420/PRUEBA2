@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bodega - {{ bodega.nombre }}</title>
+</head>
+<body>
+    <h1>{{ bodega.nombre }}</h1>
+    <p>Ubicación: {{ bodega.ubicacion }}</p>
+    <p>Capacidad máxima: {{ bodega.capacidad_maxima }}</p>
+    <h2>Productos almacenados</h2>
+    <ul>
+        {% for producto, cantidad in bodega.productos_almacenados.items() %}
+            <li><a href="{{ url_for('producto', nombre=producto.nombre) }}">{{ producto.nombre }}</a> - Cantidad: {{ cantidad }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Volver al inicio</a>
+</body>
+</html>
